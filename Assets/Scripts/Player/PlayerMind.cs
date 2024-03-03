@@ -30,7 +30,7 @@ public class PlayerMind : MonoBehaviour
     public Volume volume;
     void Start()
     {
-        volume = GameObject.FindGameObjectsWithTag("Volume").FirstOrDefault().GetComponent<Volume>();
+        volume = GameObject.FindGameObjectsWithTag("VolumeChromatic").FirstOrDefault().GetComponent<Volume>();
     }
 
     // Update is called once per frame
