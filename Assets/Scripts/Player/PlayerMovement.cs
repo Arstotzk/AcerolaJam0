@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsWalking", false);
         }
 
-        if (Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint") && z > 0)
         {
             speed = 8f;
             animator.SetBool("IsRunning", true);
