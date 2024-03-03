@@ -16,6 +16,9 @@ public class Puppet : MonoBehaviour
     private Animator animator;
     public float speed = 5;
     private int runNum = 0;
+
+    public Collider damageCollider;
+    public Collider fearCollider;
     void Start()
     {
         player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
@@ -35,6 +38,8 @@ public class Puppet : MonoBehaviour
                                        player.transform.position.z);
             transform.LookAt(targetPostition);
             transform.position += transform.forward * Time.deltaTime * speed;
+            damageCollider.enabled = true;
+            fearCollider.enabled = true;
         }
 
         if (isCanMove && Time.time > moveTime && lastmoveTime < moveTime)
@@ -55,5 +60,7 @@ public class Puppet : MonoBehaviour
     {
         animator.SetBool("run" + runNum, false);
         isMove = false;
+        damageCollider.enabled = false;
+        fearCollider.enabled = false;
     }
 }
