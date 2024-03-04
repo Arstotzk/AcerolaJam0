@@ -15,7 +15,8 @@ public class Item : MonoBehaviour
     public int linePoints = 20;
     public float timeBetweenPoints = 0.1f;
     public float throwForce = 10f;
-    void Start()
+
+    virtual protected void Start()
     {
         var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
         lineRenderer = player.GetComponent<LineRenderer>();

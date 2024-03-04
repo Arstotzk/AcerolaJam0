@@ -9,6 +9,7 @@ TagManager:
   - VolumeChromatic
   - Wall
   - MainGround
+  - Ground
   layers:
   - Default
   - TransparentFX

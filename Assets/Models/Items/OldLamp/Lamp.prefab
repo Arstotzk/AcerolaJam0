@@ -127,7 +127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_Name
-      value: model
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalScale.x
@@ -194,9 +194,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7256096738598085816}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6644286971783885532}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       insertIndex: -1
@@ -215,27 +212,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
   m_PrefabInstance: {fileID: 6440896629187264021}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7256096738598085816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6440896629187164341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a33556ab31c091499eb199222cffcb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemCollider: {fileID: 6644286971783885532}
-  triggerCollider: {fileID: 3459786573013791890}
-  positionOnPick: {x: 0, y: 0, z: 0}
-  rotate: {x: 0, y: 90, z: 0}
-  ground: {fileID: 0}
-  lineRenderer: {fileID: 0}
-  linePoints: 20
-  timeBetweenPoints: 0.1
-  throwForce: 10
 --- !u!65 &6644286971783885532
 BoxCollider:
   m_ObjectHideFlags: 0
