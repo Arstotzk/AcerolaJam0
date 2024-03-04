@@ -6,6 +6,7 @@ public class PlayerIteraction : MonoBehaviour
 {
     public Inventory inventory;
     public float iteractDistance = 1.5f;
+
     void Start()
     {
 
@@ -30,6 +31,51 @@ public class PlayerIteraction : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if (Input.GetButtonDown("Drop"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.Drop();
+        }
+
+        if (Input.GetButtonDown("RightClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionRightClickDown();
+        }
+        if (Input.GetButton("RightClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionRightClickHold();
+        }
+        if (Input.GetButtonUp("RightClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionRightClickUp();
+        }
+
+        if (Input.GetButtonDown("LeftClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionLeftClickDown();
+        }
+        if (Input.GetButton("LeftClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionLeftClickHold();
+        }
+        if (Input.GetButtonUp("LeftClick"))
+        {
+            var item = inventory.GetChosenItem();
+            if (item != null)
+                item.IteractionLeftClickUp();
         }
     }
 }
