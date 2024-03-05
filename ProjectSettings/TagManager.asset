@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - MainGround
   - Ground
+  - Item
   layers:
   - Default
   - TransparentFX
