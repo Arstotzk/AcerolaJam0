@@ -57,4 +57,12 @@ public class Puppet : MonoBehaviour
         damageCollider.enabled = false;
         fearCollider.enabled = false;
     }
+    public void Death()
+    {
+        animator.SetBool("death", true);
+        isCanMove = false;
+        agent.speed = 0;
+        damageCollider.enabled = false;
+        fearCollider.enabled = false;
+    }
 }

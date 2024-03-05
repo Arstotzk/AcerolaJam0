@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LampIteract : MonoBehaviour
+public class LampItemIteract : MonoBehaviour
 {
     Lamp lamp;
     void Start()
@@ -13,9 +13,10 @@ public class LampIteract : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var tag = other.gameObject.tag;
-        if (tag == "Ground" || tag == "Wall" || tag == "Enemy")
+        if (tag == "Item")
         {
-            lamp.Fire();
+            if (other.gameObject != lamp)
+                lamp.Fire();
         }
     }
 }

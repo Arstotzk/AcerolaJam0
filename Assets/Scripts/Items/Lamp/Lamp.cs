@@ -7,6 +7,11 @@ public class Lamp : Item
     // Start is called before the first frame update
     private LampIteract lampIteract;
     private Light light;
+    private bool fireStarted = false;
+    public float continuedTime;
+    private float startTime;
+    public GameObject lampFire;
+    private bool isAlreadyFired = false;
 
     override protected void Start()
     {
@@ -18,7 +23,11 @@ public class Lamp : Item
     // Update is called once per frame
     void Update()
     {
-        
+        if (fireStarted && startTime + continuedTime < Time.time)
+        {
+            fireStarted = false;
+            lampFire.SetActive(false);
+        }
     }
 
     public override void IteractionRightClickUp()
@@ -28,6 +37,13 @@ public class Lamp : Item
     }
     public void Fire()
     {
+        if (isAlreadyFired)
+            return;
         light.enabled = false;
+        lampFire.SetActive(true);
+        lampFire.GetComponent<LampFire>().FireStart();
+        startTime = Time.time;
+        fireStarted = true;
+        isAlreadyFired = true;
     }
 }
