@@ -37,45 +37,61 @@ public class PlayerIteraction : MonoBehaviour
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.Drop();
+                inventory.RemoveItem(item);
+            }
         }
 
         if (Input.GetButtonDown("RightClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionRightClickDown();
+            }
         }
         if (Input.GetButton("RightClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionRightClickHold();
+            }
         }
         if (Input.GetButtonUp("RightClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionRightClickUp();
+                inventory.RemoveItem(item);
+            }
         }
 
         if (Input.GetButtonDown("LeftClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionLeftClickDown();
+            }
         }
         if (Input.GetButton("LeftClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionLeftClickHold();
+            }
         }
         if (Input.GetButtonUp("LeftClick"))
         {
             var item = inventory.GetChosenItem();
             if (item != null)
+            {
                 item.IteractionLeftClickUp();
+            }
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    //TODO: Rework that shi...
     public Item item1;
     public Item item2;
     public Item item3;
@@ -78,7 +79,35 @@ public class Inventory : MonoBehaviour
 
     public void PickUpItem(Item item)
     {
-        switch (currentItemSlot)
+        int? emptySlot = null;
+        for (int slot = 4; slot >= 1; slot--)
+        {
+            Item itemSlot = null;
+            switch (slot)
+            {
+                case 1:
+                    itemSlot = item1;
+                    break;
+                case 2:
+                    itemSlot = item2;
+                    break;
+                case 3:
+                    itemSlot = item3;
+                    break;
+                case 4:
+                    itemSlot = item4;
+                    break;
+                default:
+                    Debug.LogError("Inventory PickUpItem slot: " + slot);
+                    break;
+            }
+            if (itemSlot == null)
+                emptySlot = slot;
+        }
+        if (emptySlot.HasValue == false)
+            return;
+
+        switch (emptySlot.Value)
         {
             case 1:
                 item1 = item;
@@ -93,9 +122,22 @@ public class Inventory : MonoBehaviour
                 item4 = item;
                 break;
             default:
-                Debug.LogError("Inventory PickUpItem: " + currentItemSlot);
+                Debug.LogError("Inventory PickUpItem: " + emptySlot.Value);
                 break;
         }
+        currentItemSlot = emptySlot.Value;
         chosenItem.SetItem(item);
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if (item.Equals(item1))
+            item1 = null;
+        if (item.Equals(item2))
+            item2 = null;
+        if (item.Equals(item3))
+            item3 = null;
+        if (item.Equals(item4))
+            item4 = null;
     }
 }
