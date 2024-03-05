@@ -6,6 +6,7 @@ using System.Linq;
 public class Item : MonoBehaviour
 {
     public Collider itemCollider;
+    public MeshCollider itemMeshCollider;
     public Collider triggerCollider;
     public Vector3 positionOnPick;
     public Vector3 rotate;
@@ -30,7 +31,10 @@ public class Item : MonoBehaviour
 
     public void PickUp()
     {
-        itemCollider.enabled = false;
+        if (itemCollider != null)
+            itemCollider.enabled = false;
+        if (itemMeshCollider != null)
+            itemMeshCollider.enabled = false;
         triggerCollider.enabled = false;
     }
     virtual public void IteractionRightClickDown()
@@ -80,7 +84,10 @@ public class Item : MonoBehaviour
     {
         lineRenderer.enabled = false;
         transform.parent = ground.transform;
-        itemCollider.enabled = true;
+        if(itemCollider != null)
+            itemCollider.enabled = true;
+        if (itemMeshCollider != null)
+            itemMeshCollider.enabled = true;
         triggerCollider.enabled = true;
         GetComponent<Rigidbody>().isKinematic = false;
     }
