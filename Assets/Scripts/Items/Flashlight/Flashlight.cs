@@ -20,7 +20,7 @@ public class Flashlight : Item
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("CollisionEnter: " + collision.gameObject.ToString());
+        //Debug.Log("Flashlight CollisionEnter: " + collision.gameObject.ToString());
         TurnLight();
     }
     public void TurnLight() 

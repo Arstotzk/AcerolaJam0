@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LampItemIteract : MonoBehaviour
 {
-    Lamp lamp;
+    private Lamp lamp;
     void Start()
     {
         lamp = GetComponentInParent<Lamp>();
@@ -12,6 +12,7 @@ public class LampItemIteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("LampItemIteract TriggerEnter: " + other.gameObject.ToString());
         var tag = other.gameObject.tag;
         if (tag == "Item")
         {

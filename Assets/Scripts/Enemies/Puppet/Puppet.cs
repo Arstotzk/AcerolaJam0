@@ -40,7 +40,7 @@ public class Puppet : MonoBehaviour
             {
                 moveTime = Time.time + moveAfterTime;
                 lastmoveTime = Time.time;
-                Debug.Log("MoveTime:" + lastmoveTime);
+                //Debug.Log("MoveTime:" + lastmoveTime);
                 agent.destination = player.transform.position;
                 agent.speed = speed;
                 damageCollider.enabled = true;

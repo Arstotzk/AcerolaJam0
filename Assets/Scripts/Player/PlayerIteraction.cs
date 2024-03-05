@@ -29,6 +29,11 @@ public class PlayerIteraction : MonoBehaviour
                     {
                         inventory.PickUpItem(item);
                     }
+                    var door = hit.transform.gameObject.GetComponent<Door>();
+                    if (door != null)
+                    {
+                        door.Action();
+                    }
                 }
             }
         }
