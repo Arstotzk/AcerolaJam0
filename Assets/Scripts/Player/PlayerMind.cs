@@ -6,7 +6,7 @@ using System.Linq;
 
 public class PlayerMind : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
     private float _mind;
     public float mind {
         get => _mind;
@@ -33,10 +33,9 @@ public class PlayerMind : MonoBehaviour
         volume = GameObject.FindGameObjectsWithTag("VolumeChromatic").FirstOrDefault().GetComponent<Volume>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        mind += 2f;
+        mind += 0.3f;
         volume.weight = 1 - (mind / 100); 
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageCollider : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float healthDamage = 5f;
     void Start()
     {
         
@@ -21,7 +22,7 @@ public class DamageCollider : MonoBehaviour
 
         if (other.TryGetComponent<PlayerHealth>(out var playerHealth)) 
         {
-            playerHealth.health -= 5;
+            playerHealth.health -= healthDamage;
         }
     }
 }

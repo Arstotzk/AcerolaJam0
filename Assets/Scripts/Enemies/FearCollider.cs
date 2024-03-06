@@ -5,6 +5,7 @@ using UnityEngine;
 public class FearCollider : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float mindDamage = 5f;
     void Start()
     {
         
@@ -21,7 +22,7 @@ public class FearCollider : MonoBehaviour
 
         if (other.TryGetComponent<PlayerMind>(out var playerMind))
         {
-            playerMind.mind -= 5;
+            playerMind.mind -= mindDamage;
         }
     }
 }
