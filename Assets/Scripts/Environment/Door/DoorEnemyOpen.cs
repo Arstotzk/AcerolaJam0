@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorEnemyOpen : MonoBehaviour
 {
-    private Door door;
+    public Door door;
     void Start()
     {
         door = GetComponentInParent<Door>();

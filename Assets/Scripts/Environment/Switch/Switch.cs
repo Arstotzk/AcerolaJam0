@@ -7,6 +7,7 @@ public class Switch : MonoBehaviour
     // Start is called before the first frame update
     private Animator animator;
     public bool isOn = false;
+    public Door door;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,6 +25,10 @@ public class Switch : MonoBehaviour
         {
             animator.SetBool("on", true);
             isOn = true;
+            if(door != null)
+            {
+                door.isCanAction = true;
+            }
         } 
     }
 
