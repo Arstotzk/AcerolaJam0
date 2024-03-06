@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 20f;
+    public float defaultSpeed = 4f;
+    public float sprintSpeed = 8f;
+    public float maxDebufSpeed = 3.5f;
+    public float debufSpeed = 0f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
@@ -51,12 +55,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Sprint") && z > 0)
         {
-            speed = 8f;
+            speed = sprintSpeed - debufSpeed * 2;
             animator.SetBool("IsRunning", true);
         }
         else
         {
-            speed = 4f;
+            speed = defaultSpeed - debufSpeed;
             animator.SetBool("IsRunning", false);
         }
 
@@ -68,5 +72,14 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="multiply">From 0.0 to 1.0</param>
+    public void SetDebufSpeed(float multiply)
+    {
+        debufSpeed = maxDebufSpeed * multiply;
     }
 }

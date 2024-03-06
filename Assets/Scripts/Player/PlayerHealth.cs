@@ -4,5 +4,36 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 100f;
+    [SerializeField]
+    private float _health;
+    public float health
+    {
+        get => _health;
+        set
+        {
+            if (value < 0)
+            {
+                _health = 0;
+            }
+            else if (value > 100)
+            {
+                _health = 100;
+            }
+            else
+            {
+                _health = value;
+            }
+        }
+    }
+
+    private PlayerMovement playerMovement;
+    public void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+    void FixedUpdate()
+    {
+        health += 0.2f;
+        playerMovement.SetDebufSpeed(1 - health/100);
+    }
 }
