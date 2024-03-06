@@ -24,6 +24,7 @@ public class PlayerIteraction : MonoBehaviour
                 Debug.Log("Raycast object: " + hit.transform.name + " distance: " + hit.distance);
                 if (hit.distance < iteractDistance)
                 {
+                    //TODO item -> iteractItem; pickableItem
                     var item = hit.transform.gameObject.GetComponent<Item>();
                     if (item != null)
                     {
@@ -33,6 +34,11 @@ public class PlayerIteraction : MonoBehaviour
                     if (door != null)
                     {
                         door.Action();
+                    }
+                    var switchObject = hit.transform.gameObject.GetComponent<Switch>();
+                    if (switchObject != null)
+                    {
+                        switchObject.Action();
                     }
                 }
             }
