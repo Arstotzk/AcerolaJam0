@@ -6,6 +6,7 @@ public class GravityItem : Item
 {
 
     public Collider gravityCollider;
+    public GameObject vfx;
     override protected void Start()
     {
         base.Start();
@@ -17,7 +18,9 @@ public class GravityItem : Item
     public void ChangeGravity()
     {
         gravityCollider.enabled = true;
-        StartCoroutine(Disable(0.2f));
+        GetComponent<MeshRenderer>().enabled = false;
+        vfx.SetActive(true);
+        StartCoroutine(Disable(1f));
     }
     private IEnumerator Disable(float time)
     {
