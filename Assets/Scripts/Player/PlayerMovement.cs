@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     public void Start()
     {
         animator = GetComponent<Animator>();
@@ -31,15 +31,23 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0 && gravity < 0)
         {
             velocity.y = -2f;
+        }
+        else if (isGrounded && velocity.y > 0 && gravity > 0)
+        {
+            velocity.y = 2f;
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        var revert = 1f;
+        if (gravity > 0)
+            revert = -1f;
+
+        Vector3 move = transform.right * x * revert + transform.forward * z;
         Vector3 motion = move * speed * Time.deltaTime;
 
         controller.Move(motion);
@@ -66,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+            velocity.y = Mathf.Sqrt(Mathf.Abs(jumpHeight * gravity)) * revert;
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -81,5 +89,12 @@ public class PlayerMovement : MonoBehaviour
     public void SetDebufSpeed(float multiply)
     {
         debufSpeed = maxDebufSpeed * multiply;
+    }
+
+    public void ReverseGravity()
+    {
+        gravity = -gravity;
+        animator.SetBool("IsReverseGravity", gravity > 0);
+        Camera.main.GetComponent<MouseInput>().isReverted = gravity > 0;
     }
 }

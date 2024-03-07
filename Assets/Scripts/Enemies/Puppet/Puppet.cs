@@ -19,6 +19,9 @@ public class Puppet : MonoBehaviour
 
     public Collider damageCollider;
     public Collider fearCollider;
+
+    public bool isOnGround = true;
+    public bool isReverseGravity = false;
     void Start()
     {
         player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
@@ -50,6 +53,13 @@ public class Puppet : MonoBehaviour
             }
         }
     }
+    public void FixedUpdate()
+    {
+        if (!isOnGround)
+        {
+            transform.position += Vector3.up;
+        }
+    }
     public void StopMove()
     {
         animator.SetBool("run" + runNum, false);
@@ -64,5 +74,18 @@ public class Puppet : MonoBehaviour
         agent.speed = 0;
         damageCollider.enabled = false;
         fearCollider.enabled = false;
+        GetComponent<Collider>().enabled = false;
+    }
+    public void ReverseGravity()
+    {
+        isOnGround = false;
+        isReverseGravity = !isReverseGravity;
+        agent.enabled = false;
+        transform.localRotation = Quaternion.Euler(0f, 0f, 180f);
+    }
+    public void SetOnGround()
+    {
+        isOnGround = true;
+        agent.enabled = true;
     }
 }
