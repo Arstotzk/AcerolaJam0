@@ -9,6 +9,8 @@ public class MouseInput : MonoBehaviour
 
     public Transform playerBody;
     public bool isReverted = false;
+    public bool isNarrow = false;
+    public Quaternion narrowRotation;
 
     float rotationX = 0f;
     void Start()
@@ -30,6 +32,12 @@ public class MouseInput : MonoBehaviour
         if (isReverted)
             rotationZ = 180f;
         transform.localRotation = Quaternion.Euler(rotationX, 0f, rotationZ);
+
+        if (isNarrow)
+        {
+            playerBody.rotation = narrowRotation;
+            return;
+        }
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

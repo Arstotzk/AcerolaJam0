@@ -5,6 +5,7 @@ using UnityEngine;
 public class NarrowTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Quaternion narrowRotation;
     void Start()
     {
         
@@ -26,6 +27,12 @@ public class NarrowTrigger : MonoBehaviour
             var playerNarrow = other.gameObject.GetComponent<PlayerNarrow>();
             if (playerNarrow != null)
                 playerNarrow.isNarrow = true;
+            var mouseInput = other.gameObject.GetComponentInChildren<MouseInput>();
+            if (mouseInput != null)
+            {
+                mouseInput.isNarrow = true;
+                mouseInput.narrowRotation = narrowRotation;
+            }
         }
     }
     private void OnTriggerStay(Collider other)
@@ -42,6 +49,9 @@ public class NarrowTrigger : MonoBehaviour
             var playerNarrow = other.gameObject.GetComponent<PlayerNarrow>();
             if (playerNarrow != null)
                 playerNarrow.isNarrow = false;
+            var mouseInput = other.gameObject.GetComponentInChildren<MouseInput>();
+            if (mouseInput != null)
+                mouseInput.isNarrow = false;
         }
     }
 }
