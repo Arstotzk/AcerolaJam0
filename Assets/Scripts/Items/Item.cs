@@ -41,7 +41,7 @@ public class Item : MonoBehaviour
     {
 
     }
-    virtual public void IteractionRightClickHold()
+    virtual public void IteractionRightClickHold(bool isReverseGravity)
     {
         lineRenderer.enabled = true;
         lineRenderer.positionCount = Mathf.CeilToInt(linePoints / timeBetweenPoints) + 1;
@@ -53,7 +53,10 @@ public class Item : MonoBehaviour
         {
             index++;
             Vector3 point = startPosition + time * startVelocity;
-            point.y = startPosition.y + startVelocity.y * time + (Physics.gravity.y / 2f * time * time);
+            var reverseGravity = 1f;
+            if (isReverseGravity)
+                reverseGravity = -1f;
+            point.y = startPosition.y + startVelocity.y * time + (Physics.gravity.y * reverseGravity / 2f * time * time);
             lineRenderer.SetPosition(index, point);
         }
     }

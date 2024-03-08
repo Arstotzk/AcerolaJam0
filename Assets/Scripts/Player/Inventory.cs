@@ -140,4 +140,15 @@ public class Inventory : MonoBehaviour
         if (item.Equals(item4))
             item4 = null;
     }
+    public void ReverseGravity()
+    {
+        if (item1 != null)
+            item1.GetComponent<Gravity>().ReverseGravity();
+        if (item2 != null)
+            item2.GetComponent<Gravity>().ReverseGravity();
+        if (item3 != null)
+            item3.GetComponent<Gravity>().ReverseGravity();
+        if (item4 != null)
+            item4.GetComponent<Gravity>().ReverseGravity();
+    }
 }

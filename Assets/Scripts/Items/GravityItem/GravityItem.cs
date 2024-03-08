@@ -20,7 +20,7 @@ public class GravityItem : Item
         gravityCollider.enabled = true;
         GetComponent<MeshRenderer>().enabled = false;
         vfx.SetActive(true);
-        StartCoroutine(Disable(1f));
+        StartCoroutine(Disable(0.95f));
     }
     private IEnumerator Disable(float time)
     {

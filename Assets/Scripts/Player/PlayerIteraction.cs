@@ -67,7 +67,7 @@ public class PlayerIteraction : MonoBehaviour
             var item = inventory.GetChosenItem();
             if (item != null)
             {
-                item.IteractionRightClickHold();
+                item.IteractionRightClickHold(GetComponent<PlayerMovement>().gravity > 0);
             }
         }
         if (Input.GetButtonUp("RightClick"))
