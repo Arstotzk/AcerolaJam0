@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     public bool isGrounded;
+    public bool isNarrow;
 
     public Animator animator;
+    public Animator animatorUI;
 
     public Vector3 velocity;
     public void Start()
@@ -52,29 +54,46 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(motion);
 
-        if (motion.sqrMagnitude > 0.00005f)
+        if (isNarrow)
         {
-            animator.SetBool("IsWalking", true);
+            animator.SetBool("IsNarrow", true);
+            if (motion.sqrMagnitude > 0.00005f)
+            {
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
+            speed = 2f;
         }
         else
         {
-            animator.SetBool("IsWalking", false);
-        }
+            animator.SetBool("IsNarrow", false);
+            if (motion.sqrMagnitude > 0.00005f)
+            {
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
 
-        if (Input.GetButton("Sprint") && z > 0)
-        {
-            speed = sprintSpeed - debufSpeed * 2;
-            animator.SetBool("IsRunning", true);
-        }
-        else
-        {
-            speed = defaultSpeed - debufSpeed;
-            animator.SetBool("IsRunning", false);
-        }
+            if (Input.GetButton("Sprint") && z > 0)
+            {
+                speed = sprintSpeed - debufSpeed * 2;
+                animator.SetBool("IsRunning", true);
+            }
+            else
+            {
+                speed = defaultSpeed - debufSpeed;
+                animator.SetBool("IsRunning", false);
+            }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(Mathf.Abs(jumpHeight * gravity)) * revert;
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(Mathf.Abs(jumpHeight * gravity)) * revert;
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
