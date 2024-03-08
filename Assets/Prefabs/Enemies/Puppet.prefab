@@ -1332,11 +1332,13 @@ MonoBehaviour:
   player: {fileID: 0}
   isCanMove: 1
   lastmoveTime: 0
-  moveAfterTime: 2
+  moveAfterTime: 10
   moveChance: 100
   speed: 8
   damageCollider: {fileID: 9030369351587602916}
   fearCollider: {fileID: 1842194803368998171}
+  isOnGround: 1
+  isReverseGravity: 0
 --- !u!195 &7364195060309268037
 NavMeshAgent:
   m_ObjectHideFlags: 0
