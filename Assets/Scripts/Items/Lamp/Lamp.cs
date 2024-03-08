@@ -12,7 +12,6 @@ public class Lamp : Item
     private float startTime;
     public GameObject lampFire;
     private bool isAlreadyFired = false;
-
     override protected void Start()
     {
         base.Start();

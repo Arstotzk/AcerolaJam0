@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Item : MonoBehaviour
     public float timeBetweenPoints = 0.1f;
     public float throwForce = 10f;
 
+    public Sprite itemImage;
     virtual protected void Start()
     {
         var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();

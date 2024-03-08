@@ -127,6 +127,7 @@ public class Inventory : MonoBehaviour
         }
         currentItemSlot = emptySlot.Value;
         chosenItem.SetItem(item);
+        GetComponent<InventoryUI>().RedrawInventory();
     }
 
     public void RemoveItem(Item item)
@@ -139,6 +140,7 @@ public class Inventory : MonoBehaviour
             item3 = null;
         if (item.Equals(item4))
             item4 = null;
+        GetComponent<InventoryUI>().RedrawInventory();
     }
     public void ReverseGravity()
     {
