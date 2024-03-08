@@ -16,6 +16,7 @@ public class PlayerNarrow : MonoBehaviour
     public CharacterController controller;
     public float minRadius = 0.05f;
     public float radiusMultiply = 0.45f;
+    public float minSize = 0.4f;
     void Start()
     {
         
@@ -29,8 +30,8 @@ public class PlayerNarrow : MonoBehaviour
             var heading = narrow.transform.position - this.transform.position;
             Debug.Log("PlayerNarrow: " + heading.sqrMagnitude);
             float size = 1f - heading.sqrMagnitude / maxDistance;
-            if (size < 0.1f)
-                size = 0.1f;
+            if (size < minSize)
+                size = minSize;
             volume.weight = 1 - size;
             Vector3 vectorScale = new Vector3(size, size, size);
             itemsUI.transform.localScale = vectorScale;
