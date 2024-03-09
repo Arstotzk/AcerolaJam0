@@ -88,4 +88,13 @@ public class Puppet : MonoBehaviour
         isOnGround = true;
         agent.enabled = true;
     }
+
+    public void PlayDirection()
+    {
+        animator.SetBool("direction", true);
+    }
+    public void StopDirection()
+    {
+        animator.SetBool("direction", false);
+    }
 }
