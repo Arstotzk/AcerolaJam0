@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerIteraction : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class PlayerIteraction : MonoBehaviour
                 Debug.Log("Raycast object: " + hit.transform.name + " distance: " + hit.distance);
                 if (hit.distance < iteractDistance)
                 {
+                    var nextScene = hit.transform.gameObject.GetComponent<NextSceneLoad>();
+                    if (nextScene != null)
+                    {
+                        SceneManager.LoadScene(nextScene.nextSceneName);
+                    }
                     //TODO item -> iteractItem; pickableItem
                     var item = hit.transform.gameObject.GetComponent<Item>();
                     if (item != null)
