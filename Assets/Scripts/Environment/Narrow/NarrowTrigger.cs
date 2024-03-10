@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NarrowTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     public Quaternion narrowRotation;
+    public LoadScene loadScene;
+
     void Start()
     {
         
@@ -33,6 +36,7 @@ public class NarrowTrigger : MonoBehaviour
                 mouseInput.isNarrow = true;
                 mouseInput.narrowRotation = narrowRotation;
             }
+            loadScene.LoadSceneAsync();
         }
     }
     private void OnTriggerStay(Collider other)
