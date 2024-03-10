@@ -48,8 +48,9 @@ public class Puppet : MonoBehaviour
                 agent.speed = speed;
                 damageCollider.enabled = true;
                 fearCollider.enabled = true;
-                runNum = Random.Range(0,2);
+                runNum = Random.Range(0,3);
                 animator.SetBool("run" + runNum, true);
+                GetComponent<PuppetSounds>().isMove = true;
             }
         }
     }
@@ -63,6 +64,7 @@ public class Puppet : MonoBehaviour
     public void StopMove()
     {
         animator.SetBool("run" + runNum, false);
+        GetComponent<PuppetSounds>().isMove = false;
         agent.speed = 0;
         damageCollider.enabled = false;
         fearCollider.enabled = false;
@@ -70,6 +72,7 @@ public class Puppet : MonoBehaviour
     public void Death()
     {
         animator.SetBool("death", true);
+        GetComponent<PuppetSounds>().isMove = false;
         isCanMove = false;
         agent.speed = 0;
         damageCollider.enabled = false;
