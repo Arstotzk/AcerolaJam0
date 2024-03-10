@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     public Collider itemCollider;
     public MeshCollider itemMeshCollider;
     public Collider triggerCollider;
+    public Collider iteractCollider;
     public Vector3 positionOnPick;
     public Vector3 rotate;
     public GameObject ground;
@@ -37,7 +38,10 @@ public class Item : MonoBehaviour
             itemCollider.enabled = false;
         if (itemMeshCollider != null)
             itemMeshCollider.enabled = false;
-        triggerCollider.enabled = false;
+        if (triggerCollider != null)
+            triggerCollider.enabled = false;
+        if (iteractCollider != null)
+            iteractCollider.enabled = false;
     }
     virtual public void IteractionRightClickDown()
     {
@@ -93,7 +97,10 @@ public class Item : MonoBehaviour
             itemCollider.enabled = true;
         if (itemMeshCollider != null)
             itemMeshCollider.enabled = true;
-        triggerCollider.enabled = true;
+        if (triggerCollider != null)
+            triggerCollider.enabled = true;
+        if (iteractCollider != null)
+            iteractCollider.enabled = true;
         GetComponent<Rigidbody>().isKinematic = false;
     }
 }

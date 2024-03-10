@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 263069512778327491}
   - component: {fileID: 3563905827737574544}
+  - component: {fileID: 1973107538834279799}
   m_Layer: 0
   m_Name: FlashlightIteract
   m_TagString: Untagged
@@ -44,6 +45,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d6a9cfcbe480147adfca6be56594b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &1973107538834279799
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187436293186550507}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.08
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1666731899612688723
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +159,7 @@ Transform:
   - {fileID: 6089031206295754318}
   - {fileID: 263069512778327491}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!33 &5514545830717139548
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -230,6 +252,7 @@ MonoBehaviour:
   itemCollider: {fileID: 8444270633923114465}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 7018154001038683127}
+  iteractCollider: {fileID: 1973107538834279799}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -287,7 +310,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2643287861790749127
 MonoBehaviour:
   m_ObjectHideFlags: 0

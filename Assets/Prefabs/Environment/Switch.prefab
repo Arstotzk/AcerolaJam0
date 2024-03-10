@@ -393,6 +393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   door: {fileID: 0}
+  colorClosed: {r: 1, g: 0.27450982, b: 0.27450982, a: 1}
+  colorOpen: {r: 0.27450982, g: 1, b: 0.27450982, a: 1}
+  doorLight: {fileID: 0}
 --- !u!135 &7343734937190226113
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697057517793864162}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.56, y: 0.68, z: 33.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   itemCollider: {fileID: 0}
   itemMeshCollider: {fileID: 5145327861090785317}
   triggerCollider: {fileID: 2647269322333316563}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 60, y: 0, z: 0}
   ground: {fileID: 0}
@@ -161,7 +162,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4755469606481706517
 MonoBehaviour:
   m_ObjectHideFlags: 0

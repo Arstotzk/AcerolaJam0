@@ -8,9 +8,13 @@ public class Switch : MonoBehaviour
     private Animator animator;
     public bool isOn = false;
     public Door door;
+    public Color colorClosed;
+    public Color colorOpen;
+    public Light doorLight;
     void Start()
     {
         animator = GetComponent<Animator>();
+        doorLight.color = colorClosed;
     }
 
     // Update is called once per frame
@@ -23,6 +27,7 @@ public class Switch : MonoBehaviour
     {
         if (!isOn)
         {
+            doorLight.color = colorOpen;
             animator.SetBool("on", true);
             isOn = true;
             if(door != null)

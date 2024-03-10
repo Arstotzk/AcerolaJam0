@@ -18,11 +18,7 @@ public class Flashlight : Item
     {
         TurnLight();
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log("Flashlight CollisionEnter: " + collision.gameObject.ToString());
-        TurnLight();
-    }
+
     public void TurnLight() 
     {
         light.enabled = !light.enabled;
