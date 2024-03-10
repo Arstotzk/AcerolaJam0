@@ -25,9 +25,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorUI;
 
     public Vector3 velocity;
+
+    public PlayerSounds playerSounds;
     public void Start()
     {
         animator = GetComponent<Animator>();
+        playerSounds = GetComponent<PlayerSounds>();
     }
     void Update()
     {
@@ -40,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
         else if (isGrounded && velocity.y > 0 && gravity > 0)
         {
             velocity.y = 2f;
+        }
+
+        if (isGrounded && playerSounds.isPlayJump == true)
+        {
+            playerSounds.isPlayLand = true;
+            playerSounds.isPlayJump = false;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -60,10 +69,12 @@ public class PlayerMovement : MonoBehaviour
             if (motion.sqrMagnitude > 0.00005f)
             {
                 animator.SetBool("IsWalking", true);
+                playerSounds.isPlayWalk = true;
             }
             else
             {
                 animator.SetBool("IsWalking", false);
+                playerSounds.isPlayWalk = false;
             }
             speed = 2f;
         }
@@ -73,26 +84,31 @@ public class PlayerMovement : MonoBehaviour
             if (motion.sqrMagnitude > 0.00005f)
             {
                 animator.SetBool("IsWalking", true);
+                playerSounds.isPlayWalk = true;
             }
             else
             {
                 animator.SetBool("IsWalking", false);
+                playerSounds.isPlayWalk = false;
             }
 
             if (Input.GetButton("Sprint") && z > 0)
             {
                 speed = sprintSpeed - debufSpeed * 2;
                 animator.SetBool("IsRunning", true);
+                playerSounds.isPlayRun = true;
             }
             else
             {
                 speed = defaultSpeed - debufSpeed;
                 animator.SetBool("IsRunning", false);
+                playerSounds.isPlayRun = false;
             }
 
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 velocity.y = Mathf.Sqrt(Mathf.Abs(jumpHeight * gravity)) * revert;
+                playerSounds.isPlayJump = true;
             }
         }
 
