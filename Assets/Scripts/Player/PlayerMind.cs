@@ -24,6 +24,15 @@ public class PlayerMind : MonoBehaviour
             {
                 _mind = value;
             }
+
+            if (value < 80)
+            {
+                GetComponent<PlayerSounds>().isFear = true;
+            }
+            else
+            {
+                GetComponent<PlayerSounds>().isFear = false;
+            }
         } 
     }
 

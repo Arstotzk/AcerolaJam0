@@ -20,6 +20,8 @@ public class PlayerSounds : MonoBehaviour
     public List<AudioClip> jumpWood;
     public List<AudioClip> landWood;
 
+    public AudioClip fear;
+
     public bool isPlayWalk;
     public bool isPlayRun;
     public bool isPlayJump;
@@ -29,9 +31,12 @@ public class PlayerSounds : MonoBehaviour
     public bool onRock;
     public bool onWood;
 
+    public bool isFear;
+
     public float walkDelay = 0.5f;
     public float runDelay = 0.1f;
     public AudioSource move;
+    public AudioSource fearSource;
 
     private bool isMoveCoroutineStart = false;
     void Start()
@@ -62,6 +67,12 @@ public class PlayerSounds : MonoBehaviour
         else if (isPlayRun && !move.isPlaying && !isMoveCoroutineStart && !isOnAir)
         {
             StartCoroutine(ChangeMoveSound(runDelay, GetRunClip()));
+        }
+
+        if (isFear && !fearSource.isPlaying)
+        {
+            fearSource.clip = fear;
+            fearSource.Play();
         }
     }
     private IEnumerator ChangeMoveSound(float time, AudioClip clip)
