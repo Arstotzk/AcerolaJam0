@@ -171,6 +171,7 @@ MonoBehaviour:
   itemCollider: {fileID: 0}
   itemMeshCollider: {fileID: 7049527}
   triggerCollider: {fileID: 1355176130}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 60, y: 30, z: 0}
   ground: {fileID: 0}
@@ -464,6 +465,7 @@ MonoBehaviour:
   itemCollider: {fileID: 105217711}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 181918694}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -3079,6 +3081,161 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3529263316264705873, guid: e282280263592284b8c7c955e3517805, type: 3}
   m_PrefabInstance: {fileID: 996812063}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &497711100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8071748803326975351, guid: e3c45be6834fc994a9f7e6f087eb3dd7, type: 3}
+  m_PrefabInstance: {fileID: 5317447082586524568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &497711101
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497711100}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ba6466c0db2d12649a51ba73749902d3, type: 3}
+  m_Resource: {fileID: 8300000, guid: ba6466c0db2d12649a51ba73749902d3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &497711104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497711100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6f95294f8937b4c8a3128c9b059d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkGrass:
+  - {fileID: 8300000, guid: 551d550ab98e3cc4bb7793e752fe8628, type: 3}
+  - {fileID: 8300000, guid: 18e761ff5ef14fd4588d9283fcc9b829, type: 3}
+  - {fileID: 8300000, guid: 9c0c1f9411026f749bcb3746cd557bec, type: 3}
+  - {fileID: 8300000, guid: 38cb68a2a49e89c46bea091d75b27976, type: 3}
+  - {fileID: 8300000, guid: a62172e6f7275ff4f94c17edc8dfdd0d, type: 3}
+  - {fileID: 8300000, guid: 6a0b4267ac8ee8448b619bc9a3bca6d9, type: 3}
+  - {fileID: 8300000, guid: fc32c6fd07980144996b811e5d1f2971, type: 3}
+  - {fileID: 8300000, guid: 030e6a43a7d08bd4581668d53a9808f4, type: 3}
+  - {fileID: 8300000, guid: 56ea356e65429294f9098ef523fdb70b, type: 3}
+  - {fileID: 8300000, guid: d3f3cc8ad058cad408e97b1875afec82, type: 3}
+  runGrass:
+  - {fileID: 8300000, guid: 9a30499e47789df48aa9bdb1ec7b0982, type: 3}
+  - {fileID: 8300000, guid: 1d7e7e6569aab5a45a837f470eaddc8b, type: 3}
+  - {fileID: 8300000, guid: 31be579b280d0bc459635877e8c45aee, type: 3}
+  - {fileID: 8300000, guid: c3f3efc1106f84643a38bd21f6826aaf, type: 3}
+  - {fileID: 8300000, guid: 2de8329adc6f9b944a5ab0875fb59924, type: 3}
+  - {fileID: 8300000, guid: f39f1d43c5b9fbf449e7b39d056e5aad, type: 3}
+  - {fileID: 8300000, guid: d3ea0567dbe95714eb0ca07f43a37a96, type: 3}
+  - {fileID: 8300000, guid: 161d5a427e88d594f9906708ccdc5663, type: 3}
+  - {fileID: 8300000, guid: 7a5ff4a806216b14ab9dba35a4fb258c, type: 3}
+  - {fileID: 8300000, guid: bd5653e52c4636e4aa3b0ced8f49a18d, type: 3}
+  jumpGrass:
+  - {fileID: 8300000, guid: 984d316ed8be3ac4da9e31768a8b1fa9, type: 3}
+  - {fileID: 8300000, guid: 1a9abdcacc68aa447b151d0b1f93754b, type: 3}
+  - {fileID: 8300000, guid: fe175f117cf3fb2428d279bc830a1830, type: 3}
+  - {fileID: 8300000, guid: d3d29f80378ba8e4e9c00f92fc5b5d4e, type: 3}
+  - {fileID: 8300000, guid: 2642ca70ae8c186489090a89cce4e395, type: 3}
+  landGrass:
+  - {fileID: 8300000, guid: 6aeefb601c305f64487cebdfacae5b6c, type: 3}
+  - {fileID: 8300000, guid: a967f92e38352bb4291945423de63499, type: 3}
+  - {fileID: 8300000, guid: 856b6d74addb9ad4ab2b7b47bae3e839, type: 3}
+  - {fileID: 8300000, guid: f2bc9c36f73ea50419060ec6eb40c246, type: 3}
+  - {fileID: 8300000, guid: 09226248e570c904a900ec2ecb767a68, type: 3}
+  isPlayWalk: 0
+  isPlayRun: 0
+  isPlayJump: 0
+  isPlayLand: 0
+  walkDelay: 0.2
+  runDelay: 0.01
+  move: {fileID: 497711101}
 --- !u!1 &510506942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3722919599431675377, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
@@ -4611,6 +4768,7 @@ MonoBehaviour:
   itemCollider: {fileID: 603211242}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 1665207773}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -5555,6 +5713,7 @@ MonoBehaviour:
   itemCollider: {fileID: 815697665}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 481842078}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -6018,6 +6177,7 @@ MonoBehaviour:
   itemCollider: {fileID: 0}
   itemMeshCollider: {fileID: 878540535}
   triggerCollider: {fileID: 1053949204}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 60, y: 30, z: 0}
   ground: {fileID: 0}
@@ -6792,11 +6952,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1988280232}
   m_SourcePrefab: {fileID: 100100000, guid: 8402ea267d711e6439b198a4526755b2, type: 3}
---- !u!20 &963194227 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2663326459526689428, guid: e3c45be6834fc994a9f7e6f087eb3dd7, type: 3}
-  m_PrefabInstance: {fileID: 5317447082586524568}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &967317884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7454740212782271820, guid: 71cf10bbb146ffe41904c4603bf4896b, type: 3}
@@ -7023,6 +7178,7 @@ MonoBehaviour:
   itemCollider: {fileID: 0}
   itemMeshCollider: {fileID: 983406750}
   triggerCollider: {fileID: 1507274370}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 60, y: 30, z: 0}
   ground: {fileID: 0}
@@ -9431,6 +9587,7 @@ MonoBehaviour:
   itemCollider: {fileID: 1266938087}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 1266938086}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 0, y: 90, z: 0}
   ground: {fileID: 0}
@@ -9592,6 +9749,7 @@ MonoBehaviour:
   itemCollider: {fileID: 1297021143}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 1350023328}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -13689,6 +13847,7 @@ MonoBehaviour:
   itemCollider: {fileID: 1919247376}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 1151986804}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0.02}
   rotate: {x: 90, y: 0, z: 0}
   ground: {fileID: 0}
@@ -14177,6 +14336,7 @@ MonoBehaviour:
   itemCollider: {fileID: 0}
   itemMeshCollider: {fileID: 1988280234}
   triggerCollider: {fileID: 2109933074}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 60, y: 0, z: 0}
   ground: {fileID: 0}
@@ -14942,6 +15102,7 @@ MonoBehaviour:
   itemCollider: {fileID: 2135097502}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 2135097505}
+  iteractCollider: {fileID: 0}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 0, y: 0, z: 0}
   ground: {fileID: 0}
@@ -15145,7 +15306,7 @@ PrefabInstance:
     - target: {fileID: 4719334582932254056, guid: eecfa730166baaa4cb92698f655469c4, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 963194227}
+      objectReference: {fileID: 0}
     - target: {fileID: 8089153821916738240, guid: eecfa730166baaa4cb92698f655469c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -15442,7 +15603,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8071748803326975351, guid: e3c45be6834fc994a9f7e6f087eb3dd7, type: 3}
+      insertIndex: 7
+      addedObject: {fileID: 497711104}
+    - targetCorrespondingSourceObject: {fileID: 8071748803326975351, guid: e3c45be6834fc994a9f7e6f087eb3dd7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 497711101}
   m_SourcePrefab: {fileID: 100100000, guid: e3c45be6834fc994a9f7e6f087eb3dd7, type: 3}
 --- !u!1001 &6148207030160500301
 PrefabInstance:
