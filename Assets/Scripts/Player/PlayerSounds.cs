@@ -13,6 +13,7 @@ public class PlayerSounds : MonoBehaviour
     public bool isPlayRun;
     public bool isPlayJump;
     public bool isPlayLand;
+    public bool isOnAir = false;
 
     public float walkDelay = 0.5f;
     public float runDelay = 0.1f;
@@ -27,22 +28,24 @@ public class PlayerSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!move.isPlaying && isPlayJump)
+        if (!move.isPlaying && isPlayJump && !isOnAir)
         {
             move.clip = jumpGrass[Random.Range(0, jumpGrass.Count - 1)];
             move.Play();
+            isOnAir = true;
         }
         else if (isPlayLand)
         {
             move.clip = landGrass[Random.Range(0, landGrass.Count - 1)];
             move.Play();
             isPlayLand = false;
+            isOnAir = false;
         }
-        else if (isPlayWalk == true && !move.isPlaying && isMoveCoroutineStart == false && isPlayRun == false)
+        else if (isPlayWalk && !move.isPlaying && !isMoveCoroutineStart && !isPlayRun && !isOnAir)
         {
             StartCoroutine(ChangeMoveSound(walkDelay, walkGrass[Random.Range(0, walkGrass.Count - 1)]));
         }
-        else if (isPlayRun == true && !move.isPlaying && isMoveCoroutineStart == false)
+        else if (isPlayRun && !move.isPlaying && !isMoveCoroutineStart && !isOnAir)
         {
             StartCoroutine(ChangeMoveSound(runDelay, runGrass[Random.Range(0, runGrass.Count - 1)]));
         }
@@ -59,5 +62,6 @@ public class PlayerSounds : MonoBehaviour
         }
         isMoveCoroutineStart = false;
     }
+
 
 }
