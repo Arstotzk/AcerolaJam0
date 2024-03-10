@@ -20,6 +20,7 @@ public class Item : MonoBehaviour
     public float throwForce = 10f;
 
     public Sprite itemImage;
+
     virtual protected void Start()
     {
         var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();

@@ -22,5 +22,6 @@ public class Flashlight : Item
     public void TurnLight() 
     {
         light.enabled = !light.enabled;
+        GetComponent<ItemSounds>().PlayActivate();
     }
 }

@@ -1277,6 +1277,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4137854620047421275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2151772545624321204}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3692590550333961329}
     - targetCorrespondingSourceObject: {fileID: 3722919599431675377, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8577410625195271863}
@@ -1332,7 +1338,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isCanMove: 1
   lastmoveTime: 0
-  moveAfterTime: 10
+  moveAfterTime: 2
   moveChance: 100
   speed: 8
   damageCollider: {fileID: 9030369351587602916}
@@ -1384,6 +1390,190 @@ CapsuleCollider:
   m_Height: 2.3086548
   m_Direction: 1
   m_Center: {x: -0.070643306, y: 1.0564132, z: 0.0878942}
+--- !u!114 &2151772545624321204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653161383382645949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f76cb23228a394a8ed3d0cd1b0ce86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveClips:
+  - {fileID: 8300000, guid: 849d89ad942b60541b00ea9a2c652909, type: 3}
+  - {fileID: 8300000, guid: 7eb2513bf4e482f4abb3b3eb7566c9c4, type: 3}
+  - {fileID: 8300000, guid: bf5dc4039b20633499f52db43bc1223a, type: 3}
+  - {fileID: 8300000, guid: 52555f42fe9e84b419fc36474a9a5049, type: 3}
+  - {fileID: 8300000, guid: bddeca61621f0864c816d5a904863406, type: 3}
+  - {fileID: 8300000, guid: fd942d9ab2207c140963955c72d5910d, type: 3}
+  - {fileID: 8300000, guid: cb7a29f373110654b8d8b994efa5cc44, type: 3}
+  - {fileID: 8300000, guid: c5c53e3f6f9bfda4ba10ee65d2d45a1b, type: 3}
+  - {fileID: 8300000, guid: 9c6eb230a584c5e449eb6394e3825384, type: 3}
+  audioSource: {fileID: 3692590550333961329}
+  isMove: 0
+--- !u!82 &3692590550333961329
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653161383382645949}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 150
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.005547053
+      value: 0.9636688
+      inSlope: -8.296807
+      outSlope: -8.296807
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.37826872
+    - serializedVersion: 3
+      time: 0.032353416
+      value: 0.6993408
+      inSlope: -25.400146
+      outSlope: -25.400146
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.40162605
+    - serializedVersion: 3
+      time: 0.04107478
+      value: 0.50057983
+      inSlope: -9.378749
+      outSlope: -9.378749
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.06197744
+      value: 0.27365112
+      inSlope: -2.3446872
+      outSlope: -2.3446872
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.11531077
+      value: 0.14743042
+      inSlope: -0.5861718
+      outSlope: -0.5861718
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.21044943
+      value: 0.069488525
+      inSlope: -0.14654295
+      outSlope: -0.14654295
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4295506
+      value: 0.028381348
+      inSlope: -0.036635738
+      outSlope: -0.036635738
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.85333335
+      value: 0.0078125
+      inSlope: -0.0091589345
+      outSlope: -0.0091589345
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.006666667
+      inSlope: -0.006669329
+      outSlope: -0.006669329
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &5465269001857148423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f5523ffc963f0e24aa4a4d6d922ca856, type: 3}
