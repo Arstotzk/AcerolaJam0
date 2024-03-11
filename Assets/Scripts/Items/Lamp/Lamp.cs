@@ -38,6 +38,7 @@ public class Lamp : Item
     {
         if (isAlreadyFired)
             return;
+        GetComponent<ItemSounds>().PlayActivate();
         light.enabled = false;
         lampFire.SetActive(true);
         lampFire.GetComponent<LampFire>().FireStart();

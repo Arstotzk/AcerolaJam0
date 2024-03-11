@@ -23,6 +23,15 @@ public class PlayerHealth : MonoBehaviour
             {
                 _health = value;
             }
+
+            if (value < 50)
+            {
+                GetComponent<PlayerSounds>().isLowHealth = true;
+            }
+            else
+            {
+                GetComponent<PlayerSounds>().isLowHealth = false;
+            }
         }
     }
 

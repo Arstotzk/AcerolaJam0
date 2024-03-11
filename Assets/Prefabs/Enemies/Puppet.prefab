@@ -1338,7 +1338,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isCanMove: 1
   lastmoveTime: 0
-  moveAfterTime: 2
+  moveAfterTime: 10
   moveChance: 100
   speed: 8
   damageCollider: {fileID: 9030369351587602916}

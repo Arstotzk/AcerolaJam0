@@ -18,7 +18,7 @@ public class ItemHitTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ground" || other.tag == "Enemy")
+        if (other.tag == "Ground" || other.tag == "Enemy" || other.tag == "Wall")
         {
             GetComponentInParent<ItemSounds>().PlayHit();
         }

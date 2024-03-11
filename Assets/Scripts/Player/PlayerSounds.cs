@@ -32,11 +32,13 @@ public class PlayerSounds : MonoBehaviour
     public bool onWood;
 
     public bool isFear;
+    public bool isLowHealth;
 
     public float walkDelay = 0.5f;
     public float runDelay = 0.1f;
     public AudioSource move;
     public AudioSource fearSource;
+    public AudioSource healthSource;
 
     private bool isMoveCoroutineStart = false;
     void Start()
@@ -73,6 +75,11 @@ public class PlayerSounds : MonoBehaviour
         {
             fearSource.clip = fear;
             fearSource.Play();
+        }
+
+        if (isLowHealth && !healthSource.isPlaying)
+        {
+            healthSource.Play();
         }
     }
     private IEnumerator ChangeMoveSound(float time, AudioClip clip)
