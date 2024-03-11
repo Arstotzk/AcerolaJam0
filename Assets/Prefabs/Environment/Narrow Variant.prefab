@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789bb5ec9389af244ab9696e2febef84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Flashlight
+  sceneName: GravityRock
 --- !u!114 &8343301195124429032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,15 +719,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275571723923264775, guid: 71cf10bbb146ffe41904c4603bf4896b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.746706
+      value: 13.010044
       objectReference: {fileID: 0}
     - target: {fileID: 6275571723923264775, guid: 71cf10bbb146ffe41904c4603bf4896b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3412347
+      value: 1.5134917
       objectReference: {fileID: 0}
     - target: {fileID: 6275571723923264775, guid: 71cf10bbb146ffe41904c4603bf4896b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 77.171616
+      value: 72.81
       objectReference: {fileID: 0}
     - target: {fileID: 6275571723923264775, guid: 71cf10bbb146ffe41904c4603bf4896b, type: 3}
       propertyPath: m_LocalRotation.w
