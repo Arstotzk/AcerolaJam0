@@ -24,7 +24,8 @@ public class PuppetMove : MonoBehaviour
         {
             puppet.StopDirection();
             puppet.isCanMove = true;
-            directionTrigger.SetActive(false);
+            if (directionTrigger != null)
+                directionTrigger.SetActive(false);
         }
     }
 }
