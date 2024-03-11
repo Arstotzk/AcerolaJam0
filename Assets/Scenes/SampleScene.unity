@@ -180,6 +180,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 21300000, guid: d772f3cf4847f364abf60b7414be4252, type: 3}
+  saveName: 
   gravityCollider: {fileID: 1105516788}
   vfx: {fileID: 147523269}
 --- !u!64 &7049527 stripped
@@ -474,6 +475,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!1 &105696044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +4619,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!1 &610912073
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,6 +5565,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!4 &816893290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291677550720079064, guid: bc9cd965f1fd23a43addb34365eaf508, type: 3}
@@ -6026,6 +6030,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 21300000, guid: d772f3cf4847f364abf60b7414be4252, type: 3}
+  saveName: 
   gravityCollider: {fileID: 1177424642}
   vfx: {fileID: 915898929}
 --- !u!64 &878540535 stripped
@@ -6198,7 +6203,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.13333334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: b0a2d49c4b060ca459193ef4c94e818f, type: 2}
   m_BuildHeightMesh: 0
@@ -7026,6 +7031,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
   gravityCollider: {fileID: 1184946442}
   vfx: {fileID: 114080935}
 --- !u!64 &983406750 stripped
@@ -9492,6 +9498,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
   continuedTime: 8
   lampFire: {fileID: 1623435085}
 --- !u!1001 &1281312310
@@ -9654,6 +9661,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!1 &1298717399
 GameObject:
   m_ObjectHideFlags: 0
@@ -12247,7 +12255,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.13333334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: b1d9109fa45fdb54b81b0f09ed4b5ed9, type: 2}
   m_BuildHeightMesh: 0
@@ -13752,6 +13760,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!1 &1933760449
 GameObject:
   m_ObjectHideFlags: 0
@@ -14241,6 +14250,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!64 &1988280234 stripped
 MeshCollider:
   m_CorrespondingSourceObject: {fileID: 806270326970722504, guid: 8402ea267d711e6439b198a4526755b2, type: 3}
@@ -15007,6 +15017,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 0}
+  saveName: 
 --- !u!4 &4000012650406261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3013403174042236615, guid: d9f9b1555ed50214d80057a2dcc292b1, type: 3}
@@ -15511,7 +15522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5465269001857148423, guid: 77a3a368b09a49e439e5384b2296c943, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.03
+      value: 57.59
       objectReference: {fileID: 0}
     - target: {fileID: 5465269001857148423, guid: 77a3a368b09a49e439e5384b2296c943, type: 3}
       propertyPath: m_LocalPosition.y

@@ -56,9 +56,13 @@ public class Puppet : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        if (!isOnGround)
+        if (!isOnGround && isReverseGravity)
         {
-            transform.position += Vector3.up;
+            transform.position += Vector3.up / 3;
+        }
+        else if (!isOnGround && !isReverseGravity)
+        {
+            transform.position -= Vector3.up / 3;
         }
     }
     public void StopMove()
