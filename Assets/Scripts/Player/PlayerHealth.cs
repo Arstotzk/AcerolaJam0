@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour
             if (value < 0)
             {
                 _health = 0;
+                restartScene.RestartSceneOn();
+                GetComponent<Animator>().Play("Death");
+                GetComponent<PlayerMovement>().isDeath = true;
             }
             else if (value > 100)
             {
@@ -36,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private PlayerMovement playerMovement;
+    public RestartScene restartScene;
     public void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();

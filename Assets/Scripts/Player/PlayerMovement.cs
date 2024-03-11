@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGrounded;
     public bool isNarrow;
+    public bool isDeath;
 
     public Animator animator;
     public Animator animatorUI;
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (isDeath)
+            return;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0 && gravity < 0)
