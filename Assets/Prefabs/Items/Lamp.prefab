@@ -536,15 +536,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.39
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.471
+      value: 1.115
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.72
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalRotation.w
@@ -660,6 +660,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 21300000, guid: 5789d1fe77388d142904649b88c3f9ba, type: 3}
+  saveName: lamp
   continuedTime: 8
   lampFire: {fileID: 1906807919144488572}
 --- !u!65 &393399442913438780

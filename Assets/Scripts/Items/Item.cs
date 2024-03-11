@@ -20,6 +20,7 @@ public class Item : MonoBehaviour
     public float throwForce = 10f;
 
     public Sprite itemImage;
+    public string saveName;
 
     virtual protected void Start()
     {
@@ -43,6 +44,8 @@ public class Item : MonoBehaviour
             triggerCollider.enabled = false;
         if (iteractCollider != null)
             iteractCollider.enabled = false;
+
+        GetComponentInChildren<ItemHitTrigger>().GetComponent<Collider>().enabled = false;
     }
     virtual public void IteractionRightClickDown()
     {
@@ -103,5 +106,7 @@ public class Item : MonoBehaviour
         if (iteractCollider != null)
             iteractCollider.enabled = true;
         GetComponent<Rigidbody>().isKinematic = false;
+
+        GetComponentInChildren<ItemHitTrigger>().GetComponent<Collider>().enabled = true;
     }
 }

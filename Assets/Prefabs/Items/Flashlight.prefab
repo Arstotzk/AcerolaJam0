@@ -331,6 +331,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 21300000, guid: 5014698a09f4dc249861374a111d28b3, type: 3}
+  saveName: flashlight
 --- !u!136 &8444270633923114465
 CapsuleCollider:
   m_ObjectHideFlags: 0

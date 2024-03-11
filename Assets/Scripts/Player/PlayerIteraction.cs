@@ -28,7 +28,8 @@ public class PlayerIteraction : MonoBehaviour
                     var nextScene = hit.transform.gameObject.GetComponent<NextSceneLoad>();
                     if (nextScene != null)
                     {
-                        SceneManager.LoadScene(nextScene.nextSceneName);
+                        GetComponent<Animator>().Play("Death");
+                        StartCoroutine(RestartCurrentScene(1f, nextScene.nextSceneName));
                     }
                     //TODO item -> iteractItem; pickableItem
                     var item = hit.transform.gameObject.GetComponent<Item>();
@@ -110,5 +111,12 @@ public class PlayerIteraction : MonoBehaviour
                 item.IteractionLeftClickUp();
             }
         }
+    }
+
+    private IEnumerator RestartCurrentScene(float time, string name)
+    {
+        yield return new WaitForSeconds(time);
+
+        SceneManager.LoadScene(name);
     }
 }

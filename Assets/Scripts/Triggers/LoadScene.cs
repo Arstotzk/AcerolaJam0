@@ -44,5 +44,6 @@ public class LoadScene : MonoBehaviour
     public void LoadSceneAsync() 
     {
         StartCoroutine(LoadSceneAsyncProcess(sceneName));
+        GetComponent<SaveLoadInventory>().Save();
     }
 }

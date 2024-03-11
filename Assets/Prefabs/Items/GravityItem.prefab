@@ -339,6 +339,7 @@ MonoBehaviour:
   timeBetweenPoints: 0.1
   throwForce: 10
   itemImage: {fileID: 21300000, guid: d772f3cf4847f364abf60b7414be4252, type: 3}
+  saveName: gravityRock
   gravityCollider: {fileID: 7318935012933710602}
   vfx: {fileID: 714409402685018506}
 --- !u!114 &6531458454154727705
