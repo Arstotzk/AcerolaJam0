@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/GravityRock.unity
     guid: da84dcc9f50410c4691cac149fb31c7a
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Maze.unity
+    guid: a9fa0a3c9f3e3eb41b85c1506971eb64
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: d7ed289489564e54d95d83d9223e4ba0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

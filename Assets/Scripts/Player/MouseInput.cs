@@ -13,6 +13,8 @@ public class MouseInput : MonoBehaviour
     public Quaternion narrowRotation;
 
     float rotationX = 0f;
+
+    public bool isBlockMove = false;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -20,6 +22,8 @@ public class MouseInput : MonoBehaviour
 
     void Update()
     {
+        if (isBlockMove)
+            return;
         var revert = 1f;
         if (isReverted)
             revert = -1f;

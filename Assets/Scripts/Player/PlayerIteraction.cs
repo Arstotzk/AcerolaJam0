@@ -31,6 +31,13 @@ public class PlayerIteraction : MonoBehaviour
                         GetComponent<Animator>().Play("Death");
                         StartCoroutine(RestartCurrentScene(1f, nextScene.nextSceneName));
                     }
+
+                    var end = hit.transform.gameObject.GetComponent<EndScript>();
+                    if (end != null)
+                    {
+                        end.playerPuppet.PlayEnd();
+                        StartCoroutine(RestartCurrentScene(5f, end.nextSceneName));
+                    }
                     //TODO item -> iteractItem; pickableItem
                     var item = hit.transform.gameObject.GetComponent<Item>();
                     if (item != null)
