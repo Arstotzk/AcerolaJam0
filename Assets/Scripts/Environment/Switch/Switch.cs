@@ -11,6 +11,7 @@ public class Switch : MonoBehaviour
     public Color colorClosed;
     public Color colorOpen;
     public Light doorLight;
+    public AudioSource audioSource;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -30,10 +31,11 @@ public class Switch : MonoBehaviour
             doorLight.color = colorOpen;
             animator.SetBool("on", true);
             isOn = true;
-            if(door != null)
+            if (door != null)
             {
                 door.isCanAction = true;
             }
+            audioSource.Play();
         } 
     }
 

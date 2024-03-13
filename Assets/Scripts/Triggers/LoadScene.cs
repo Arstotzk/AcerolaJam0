@@ -8,6 +8,7 @@ public class LoadScene : MonoBehaviour
     // Start is called before the first frame update
     public string sceneName;
     private AsyncOperation asyncOperation;
+    private bool isLoading = false;
     void Start()
     {
         
@@ -29,13 +30,14 @@ public class LoadScene : MonoBehaviour
 
     private IEnumerator LoadSceneAsyncProcess(string sceneName)
     {
-        asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        isLoading = true;
 
+        asyncOperation = SceneManager.LoadSceneAsync(sceneName);
         asyncOperation.allowSceneActivation = false;
 
         while (!asyncOperation.isDone)
         {
-            Debug.Log($"[scene]:{sceneName} [load progress]: {asyncOperation.progress}");
+            //Debug.Log($"[scene]:{sceneName} [load progress]: {asyncOperation.progress}");
 
             yield return null;
         }
@@ -43,6 +45,9 @@ public class LoadScene : MonoBehaviour
 
     public void LoadSceneAsync() 
     {
+        if (isLoading)
+            return;
+
         StartCoroutine(LoadSceneAsyncProcess(sceneName));
         GetComponent<SaveLoadInventory>().Save();
     }

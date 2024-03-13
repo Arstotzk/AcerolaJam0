@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4407086736077143657}
   - component: {fileID: 6465184627390904262}
   - component: {fileID: 6296028737935361459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LampItemIteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 809789677810672594}
   - component: {fileID: 4053409961264878046}
   - component: {fileID: 3094559918760252198}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LampIteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 5343290485153685810}
   - component: {fileID: 8833369493539078138}
   - component: {fileID: 2525481053549947905}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LampFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 3068892354525278684}
   - component: {fileID: 859810630116262276}
   - component: {fileID: 8290745670813384750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,6 +443,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 834070894652235667}
     m_Modifications:
+    - target: {fileID: 1054562835564666262, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388817007054719686, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938931511937748487, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167940340674716932, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860310887368847533, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222330932563043161, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286459981575398988, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8829451551789304537, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -488,6 +516,10 @@ PrefabInstance:
       value: VFX_Fire_01_Big
       objectReference: {fileID: 0}
     - target: {fileID: 8829451551789304542, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829451551789304542, guid: e91fa0fac941e714e8c4d5709097019f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -519,6 +551,10 @@ PrefabInstance:
       value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_TagString
       value: Item
       objectReference: {fileID: 0}
@@ -536,19 +572,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.75
+      value: -0.1162557
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.115
+      value: 1.5686809
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 12.444
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9960859
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalRotation.x
@@ -560,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.08839109
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -572,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -10.142
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6b2a7ea881422644f9cd78cd5b3b9247, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -651,7 +687,7 @@ MonoBehaviour:
   itemCollider: {fileID: 393399442913438780}
   itemMeshCollider: {fileID: 0}
   triggerCollider: {fileID: 729317399689666607}
-  iteractCollider: {fileID: 0}
+  iteractCollider: {fileID: 6465184627390904262}
   positionOnPick: {x: 0, y: 0, z: 0}
   rotate: {x: 0, y: 90, z: 0}
   ground: {fileID: 0}

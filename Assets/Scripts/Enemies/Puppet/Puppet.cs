@@ -22,10 +22,11 @@ public class Puppet : MonoBehaviour
 
     public bool isOnGround = true;
     public bool isReverseGravity = false;
+    public bool isDeath = false;
     void Start()
     {
-        player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
-        lastmoveTime = Time.time;
+        //player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
+        lastmoveTime = 0f;
         Debug.Log("Time:" + lastmoveTime);
         moveTime = moveAfterTime;
         animator = GetComponent<Animator>();
@@ -36,14 +37,14 @@ public class Puppet : MonoBehaviour
     void Update()
     {
 
-        if (isCanMove && Time.time > moveTime && lastmoveTime < moveTime)
+        if (isCanMove && !isDeath && Time.time > moveTime && lastmoveTime < moveTime)
         {
             var random = Random.Range(1, moveChance);
             if (random <= 1)
             {
                 moveTime = Time.time + moveAfterTime;
                 lastmoveTime = Time.time;
-                //Debug.Log("MoveTime:" + lastmoveTime);
+                Debug.Log("MoveTime:" + lastmoveTime);
                 agent.destination = player.transform.position;
                 agent.speed = speed;
                 damageCollider.enabled = true;
@@ -78,6 +79,7 @@ public class Puppet : MonoBehaviour
         animator.SetBool("death", true);
         GetComponent<PuppetSounds>().isMove = false;
         isCanMove = false;
+        isDeath = true;
         agent.speed = 0;
         damageCollider.enabled = false;
         fearCollider.enabled = false;
@@ -89,6 +91,7 @@ public class Puppet : MonoBehaviour
         isReverseGravity = !isReverseGravity;
         agent.enabled = false;
         transform.localRotation = Quaternion.Euler(0f, 0f, 180f);
+        transform.position = transform.position + (Vector3.up * 2.5f);
     }
     public void SetOnGround()
     {

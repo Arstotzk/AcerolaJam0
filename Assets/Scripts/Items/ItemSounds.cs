@@ -22,6 +22,8 @@ public class ItemSounds : MonoBehaviour
 
     public void PlayHit()
     {
+        if (hitSource.isPlaying)
+            return;
         hitSource.clip = hitClip;
         hitSource.Play();
     }

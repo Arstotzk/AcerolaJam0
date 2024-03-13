@@ -28,7 +28,7 @@ public class PlayerNarrow : MonoBehaviour
         if (isNarrow)
         {
             var heading = narrow.transform.position - this.transform.position;
-            Debug.Log("PlayerNarrow: " + heading.sqrMagnitude);
+            //Debug.Log("PlayerNarrow: " + heading.sqrMagnitude);
             float size = 1f - heading.sqrMagnitude / maxDistance;
             if (size < minSize)
                 size = minSize;

@@ -79,6 +79,8 @@ public class Inventory : MonoBehaviour
 
     public void PickUpItem(Item item)
     {
+        if (ItemInInventory(item))
+            return;
         int? emptySlot = null;
         for (int slot = 4; slot >= 1; slot--)
         {
@@ -128,6 +130,13 @@ public class Inventory : MonoBehaviour
         currentItemSlot = emptySlot.Value;
         chosenItem.SetItem(item);
         GetComponent<InventoryUI>().RedrawInventory();
+    }
+
+    public bool ItemInInventory(Item item)
+    {
+        if (item.Equals(item1) || item.Equals(item2) || item.Equals(item3) || item.Equals(item4))
+            return true;
+        return false;
     }
 
     public void RemoveItem(Item item)

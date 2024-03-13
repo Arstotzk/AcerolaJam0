@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         if (isNarrow)
         {
             animator.SetBool("IsNarrow", true);
-            if (motion.sqrMagnitude > 0.00005f)
+            if (motion.sqrMagnitude > 0.0000005f)
             {
                 animator.SetBool("IsWalking", true);
                 playerSounds.isPlayWalk = true;
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("IsNarrow", false);
-            if (motion.sqrMagnitude > 0.00005f)
+            if (motion.sqrMagnitude > 0.0000005f)
             {
                 animator.SetBool("IsWalking", true);
                 playerSounds.isPlayWalk = true;
@@ -134,5 +134,7 @@ public class PlayerMovement : MonoBehaviour
         gravity = -gravity;
         animator.SetBool("IsReverseGravity", gravity > 0);
         Camera.main.GetComponent<MouseInput>().isReverted = gravity > 0;
+        var inventory = GetComponentInChildren<Inventory>();
+        inventory.ReverseGravity();
     }
 }
